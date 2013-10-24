@@ -56,29 +56,35 @@ describe Fraction do
 			@FractionA.reciprocal.should eq("9/3")
 		end
 		
-		it "Se debe calcular el opuesto de una fraccion con -" do
-			@FractionA.-.should eq("-3/9")
+		it "Se debe calcular el opuesto de una fraccion con --" do
+			@FractionA.op.should eq("-3/9")
 		end
 		
-		if "Se debe sumar dos fracciones con + y dar el resultado de forma reducida" do
-			@FractionA.+(@FractionB).should eq("-3/9")
+		it "Se debe sumar dos fracciones con + y dar el resultado de forma reducida" do	
+			result = @FractionA.+(@FractionB)
+			Fraction.new(5,6)._num.should eq(result._num)
+			Fraction.new(5,6)._den.should eq(result._den)
 		end
 		
-		if "Se debe restar dos fracciones con - y dar el resultado de forma reducida" do
-		
+		it "Se debe restar dos fracciones con - y dar el resultado de forma reducida" do
+			result = @FractionA.-(@FractionB)
+			Fraction.new(-1,6)._num.should eq(result._num)
+			Fraction.new(-1,6)._den.should eq(result._den)
 		end
 		
-		if "Se debe multiplicar dos fracciones con * y dar el resultado de forma reducida" do
-		
+		it "Se debe multiplicar dos fracciones con * y dar el resultado de forma reducida" do
+			result = @FractionA.*(@FractionB)
+			Fraction.new(1,6)._num.should eq(result._num)
+			Fraction.new(1,6)._den.should eq(result._den)		
 		end
 		
-		if "Se debe dividir dos fracciones con / y dar el resultado de forma reducida" do
-		
+		it "Se debe dividir dos fracciones con / y dar el resultado de forma reducida" do
+			result = @FractionA./(@FractionB)
+			Fraction.new(2,3)._num.should eq(result._num)
+			Fraction.new(2,3)._den.should eq(result._den)	
 		end
 		
-	#
-  #
-  #
+
   #Se debe calcular el resto dos fracciones con % y dar el resultado de forma reducida
   #Se debe de poder comprobar si una fracion es menor que otra
   #Se debe de poder comprobar si una fracion es mayor que otra
