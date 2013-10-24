@@ -48,7 +48,9 @@ describe Fraction do
 			@FractionA.==(Fraction.new(@numerador, @denominador)).should eq(true)
 		end
 		
-  #Se debe calcular el valor absoluto de una fraccion con el metodo abs
+		it "Se debe calcular el valor absoluto de una fraccion con el metodo abs" do
+			@FractionA.abs.should eq(0)
+		end
   #Se debe calcular el reciproco de una fraccion con el metodo reciprocal
   #Se debe calcular el opuesto de una fraccion con -
   #Se debe sumar dos fracciones con + y dar el resultado de forma reducida

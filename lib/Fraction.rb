@@ -23,6 +23,10 @@ class Fraction
 		"#{@_num/@_den}"
 	end
 	
+	def abs
+		@_num/@_den
+	end
+	
 	def ==(frac) #Compara dos fracciones
 		if (@_num = frac._num) and (@_den = frac._den)
 			true
