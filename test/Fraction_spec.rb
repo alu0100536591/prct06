@@ -51,9 +51,19 @@ describe Fraction do
 		it "Se debe calcular el valor absoluto de una fraccion con el metodo abs" do
 			@FractionA.abs.should eq(0)
 		end
-  #Se debe calcular el reciproco de una fraccion con el metodo reciprocal
-  #Se debe calcular el opuesto de una fraccion con -
-  #Se debe sumar dos fracciones con + y dar el resultado de forma reducida
+		
+		it "Se debe calcular el reciproco de una fraccion con el metodo reciprocal" do
+			@FractionA.reciprocal.should eq("9/3")
+		end
+		
+		it "Se debe calcular el opuesto de una fraccion con -" do
+			@FractionA.-.should eq("-3/9")
+		end
+		
+		if "Se debe sumar dos fracciones con + y dar el resultado de forma reducida" do
+		
+		end
+		
   #Se debe restar dos fracciones con - y dar el resultado de forma reducida
   #Se debe multiplicar dos fracciones con * y dar el resultado de forma reducida
   #Se debe dividir dos fracciones con / y dar el resultado de forma reducida

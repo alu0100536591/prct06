@@ -23,8 +23,12 @@ class Fraction
 		"#{@_num/@_den}"
 	end
 	
-	def abs
+	def abs #devuelve el valor absoluto
 		@_num/@_den
+	end
+	
+	def reciprocal  #devuelve el reciproco
+		"#{@_den}/#{@_num}"	
 	end
 	
 	def ==(frac) #Compara dos fracciones
@@ -34,5 +38,11 @@ class Fraction
 			false
 		end
 	end
+	
+	def - #opuesta
+		"#{-@_num}/#{@_den}"	
+	end
+	
+
   
 end
