@@ -5,7 +5,7 @@ describe Fraction do
 		@numerador = 3
 		@denominador = 9
 		@FractionA = Fraction.new(@numerador, @denominador)
-		@FractionB = Fraction.new(@numerador, @denominador)
+		@FractionB = Fraction.new(15, 30)
 	end
   
 	describe "# almacenamiento de variables" do
@@ -61,12 +61,24 @@ describe Fraction do
 		end
 		
 		if "Se debe sumar dos fracciones con + y dar el resultado de forma reducida" do
+			@FractionA.+(@FractionB).should eq("-3/9")
+		end
+		
+		if "Se debe restar dos fracciones con - y dar el resultado de forma reducida" do
 		
 		end
 		
-  #Se debe restar dos fracciones con - y dar el resultado de forma reducida
-  #Se debe multiplicar dos fracciones con * y dar el resultado de forma reducida
-  #Se debe dividir dos fracciones con / y dar el resultado de forma reducida
+		if "Se debe multiplicar dos fracciones con * y dar el resultado de forma reducida" do
+		
+		end
+		
+		if "Se debe dividir dos fracciones con / y dar el resultado de forma reducida" do
+		
+		end
+		
+	#
+  #
+  #
   #Se debe calcular el resto dos fracciones con % y dar el resultado de forma reducida
   #Se debe de poder comprobar si una fracion es menor que otra
   #Se debe de poder comprobar si una fracion es mayor que otra
