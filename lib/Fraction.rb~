@@ -116,32 +116,6 @@ class Fraction
 		   false
 		end		  
 	end
-	
-	def <=(frac) #menor igual que
-		n1, d1 = @_num + 0.0, @_den + 0.0
-		n2, d2 = frac._num + 0.0, frac._den + 0.0
-		f1 = n1/d1
-		f2 = n2/d2
-	      
-		if f1<=f2
-		   true
-		else
-		   false
-		end		  
-	end
-	
-	def >=(frac) #mayor igual que
-		n1, d1 = @_num + 0.0, @_den + 0.0
-		n2, d2 = frac._num + 0.0, frac._den + 0.0
-		f1 = n1/d1
-		f2 = n2/d2
-	      
-		if f2<=f1
-		   true
-		else
-		   false
-		end		  
-	end
 	  
 	
   

@@ -39,9 +39,9 @@ describe Fraction do
 		end
 		
 		 it "Se debe mostar por la consola la fraccion en formato flotante" do
-			@FractionA._num = 3.0
-			@FractionA._den = 9.0
-			@FractionA.to_float.should eq("0.333333333333333")
+			#@FractionA._num = 3.0
+			#@FractionA._den = 9.0
+			@FractionA.to_float.should eq("0.3333333333333333")
 		 end
 		 
 		it "Se debe comparar si dos fracciones son iguales con ==" do
@@ -83,16 +83,25 @@ describe Fraction do
 			Fraction.new(2,3)._num.should eq(result._num)
 			Fraction.new(2,3)._den.should eq(result._den)	
 		end
+
+		it "Se debe calcular el resto dos fracciones con % y dar el resultado de forma reducida" do
+			@FractionA.%(@FractionB).should eq(0.3333333333333333)
+		end
 		
-
-  #Se debe calcular el resto dos fracciones con % y dar el resultado de forma reducida
-  #Se debe de poder comprobar si una fracion es menor que otra
-  #Se debe de poder comprobar si una fracion es mayor que otra
-  #Se debe de poder comprobar si una fracion es menor o igual que otra
-  #Se debe de poder comprobar si una fracion es mayor o igual que otra
-	end
-	
-
-
-  
+		it "Se debe de poder comprobar si una fracion es menor que otra" do
+			@FractionA.<(@FractionB).should eq(true)
+		end
+		
+		it "Se debe de poder comprobar si una fracion es mayor que otra" do
+			@FractionA.>(@FractionB).should eq(false)
+		end
+		
+		it "Se debe de poder comprobar si una fracion es menor o igual que otra" do
+			@FractionA.<=(@FractionB).should eq(true)
+		end
+		
+		it "Se debe de poder comprobar si una fracion es mayor o igual que otra" do
+			@FractionA.>=(@FractionB).should eq(false)
+		end 
+	end  
 end
